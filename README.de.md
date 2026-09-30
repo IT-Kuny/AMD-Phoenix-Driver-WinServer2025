@@ -96,7 +96,7 @@ AMD-Phoenix-Driver-WinServer2025/
 | Symptom | Ursache | Lösung |
 |---|---|---|
 | `0xe0000228` "no compatible drivers" | INF-Dekorationen werden von Build 26100 ignoriert | Installer patcht die INF automatisch (Sektionen `[ATI.Mfg.NTamd64.10.0.3]` + `[ATI.Mfg.NTamd64]`) |
-| Treiber im Store, Gerät bleibt am Basic Display Adapter | Test-signierter Treiber rangiert unterhalb des Inbox-Treibers | Installer faellt auf `devcon update` zurueck (erzwungene Installation) |
+| Treiber im Store, Gerät bleibt am Basic Display Adapter | Test-signierter Treiber rangiert unterhalb des Inbox-Treibers | Installer faellt auf `devcon update` zurück (erzwungene Installation) |
 | Import-Feher, "file not found" (`acpcfg0001.dat`, `*.xclbin`) | Release-Zips unvollstaendig extrahiert | Die **kompletten** Zips nach `Drivers\Audio` / `Drivers\NPU` extrahieren |
 | `inf2cat`-Fehler | Doppelte INF-Sektionen | Installer dedupliziert automatisch; sonst Release neu laden |
 | Zertifikatsfehler `0x800b0109` bei der Installation | Katalog unsigniert / Zertifikat fehlt | Installer erstellt das Zertifikat und signiert alle Kataloge neu |
