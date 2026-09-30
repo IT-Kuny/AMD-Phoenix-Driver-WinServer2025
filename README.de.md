@@ -63,12 +63,12 @@ powershell -ExecutionPolicy Bypass -File Install.ps1 -PatchOnly
 
 ```
 AMD-Phoenix-Driver-WinServer2025/
-|- Setup.ps1                # Laedt + extrahiert Treiber-Zips (-Download)
+|- Setup.ps1                # Lädt + extrahiert Treiber-Zips (-Download)
 |- Install.bat               # Doppelklick-Installation (auto-elevate)
 |- Install.ps1               # Haupt-Installer
 |- README.md                 # Englisch (Standard)
 |- README.de.md              # Diese Datei
-|- README.tr.md              # Tuerkische Version
+|- README.tr.md              # Türkische Version
 |- Drivers/
 |  |- GPU/                   # AMD Radeon 780M Display-Treiber (~1.9 GB)
 |  |  |- u0410304.inf        # AMD GPU-INF (wird zur Laufzeit gepatcht)
@@ -96,8 +96,8 @@ AMD-Phoenix-Driver-WinServer2025/
 | Symptom | Ursache | Lösung |
 |---|---|---|
 | `0xe0000228` "no compatible drivers" | INF-Dekorationen werden von Build 26100 ignoriert | Installer patcht die INF automatisch (Sektionen `[ATI.Mfg.NTamd64.10.0.3]` + `[ATI.Mfg.NTamd64]`) |
-| Treiber im Store, Gerät bleibt am Basic Display Adapter | Test-signierter Treiber rangiert unterhalb des Inbox-Treibers | Installer faellt auf `devcon update` zurück (erzwungene Installation) |
-| Import-Feher, "file not found" (`acpcfg0001.dat`, `*.xclbin`) | Release-Zips unvollstaendig extrahiert | Die **kompletten** Zips nach `Drivers\Audio` / `Drivers\NPU` extrahieren |
+| Treiber im Store, Gerät bleibt am Basic Display Adapter | Test-signierter Treiber rangiert unterhalb des Inbox-Treibers | Installer fällt auf `devcon update` zurück (erzwungene Installation) |
+| Import-Feher, "file not found" (`acpcfg0001.dat`, `*.xclbin`) | Release-Zips unvollständig extrahiert | Die **kompletten** Zips nach `Drivers\Audio` / `Drivers\NPU` extrahieren |
 | `inf2cat`-Fehler | Doppelte INF-Sektionen | Installer dedupliziert automatisch; sonst Release neu laden |
 | Zertifikatsfehler `0x800b0109` bei der Installation | Katalog unsigniert / Zertifikat fehlt | Installer erstellt das Zertifikat und signiert alle Kataloge neu |
 
@@ -106,7 +106,7 @@ AMD-Phoenix-Driver-WinServer2025/
 - **Test Signing** bleibt aktiviert - auf dem Desktop kann ein "Test Mode"-Wasserzeichen erscheinen.
 - Die Pluton-Null-Treiber-INF wird analog zur GPU-INF gepatcht (die HWID-Zeile steckt in einer `...14393`-Dekorierten Sektion, die Build 26100 ignoriert).
 - GPU-Treiber aus der **AMD Software PRO Edition** (Oktober 2024), gepatcht für Server ProductType.
-- Das Zertifikat "AMD Driver Test" muss installiert bleiben, solange der Treiber genutzt wird - Loeschen bricht die Katalog-Validierung.
+- Das Zertifikat "AMD Driver Test" muss installiert bleiben, solange der Treiber genutzt wird - Löschen bricht die Katalog-Validierung.
 
 ## Getestet auf
 
