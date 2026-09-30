@@ -116,4 +116,4 @@ AMD-Phoenix-Driver-WinServer2025/
 
 ## Lizenz
 
-Die Installer-Skripte werden as-is unter MIT bereitgestellt. AMD-Treiberdateien gehoeren Advanced Micro Devices, Inc. und unterliegen den AMD-Lizenzbedingungen.
+Siehe [LICENSE](LICENSE): Die Installer-Skripte und die Dokumentation in diesem Repo stehen unter MIT. **Alle Treiberdateien** (alles unter `Drivers/` und smtliche Release-Assets) gehren Advanced Micro Devices, Inc. / Microsoft Corporation und unterliegen deren eigenen Lizenzbedingungen - sie sind NICHT MIT und werden unverndert ausschliesslich zu Installationszwecken weiterverbreitet.

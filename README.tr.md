@@ -88,4 +88,4 @@ Onemli: Release zip'lerinin **tamamini** `Drivers\` klasorlerine cikarin - eksik
 
 ## Lisans
 
-Kurulum betikleri MIT lisansiyla oldugu gibi saglanir. AMD surucu dosyalari Advanced Micro Devices, Inc.'in mulkiyetindedir ve AMD lisans kosullarina tabidir.
+Bkz. [LICENSE](LICENSE): Bu repodaki kurulum betikleri ve dokumantasyon MIT lisanslidir. **Tum surucu dosyalari** (`Drivers/` altindaki her sey ve tum surum varlklari) Advanced Micro Devices, Inc. / Microsoft Corporation'un mulkiyetindedir ve kendi lisans kosullarna tabidir - MIT DEGILDIR ve yalnzca kurulum amacyla degistirilmemis olarak yeniden dagitilir.
