@@ -100,6 +100,7 @@ AMD-Phoenix-Driver-WinServer2025/
 | `0xe0000228` "no compatible drivers" | INF decorations not honored by build 26100 | Installer patches INF automatically (sections `[ATI.Mfg.NTamd64.10.0.3]` + `[ATI.Mfg.NTamd64]`) |
 | Driver in store but device stays on Basic Display Adapter | Test-signed driver ranks below inbox driver | Installer falls back to `devcon update` (forced install) |
 | Import fails, "file not found" (`acpcfg0001.dat`, `*.xclbin`) | Release zips not fully extracted | Extract the **complete** zips into `Drivers\Audio` / `Drivers\NPU` |
+| System freezes when enabling GPU compute/inference on the iGPU (e.g. Ollama `OLLAMA_IGPU_ENABLE=1`, Vulkan) | Test-signed driver + Vulkan compute init = hard hang (verified on Server 2025, required KVM recovery) | **Do not enable GPU inference with this test-signed driver.** Display-only usage is stable |
 | `inf2cat` errors | Duplicate INF sections | Installer dedupes automatically; if it persists, re-download the release |
 | Certificate error `0x800b0109` during install | Catalog not signed / cert missing | Installer creates the cert and re-signs all catalogs |
 
