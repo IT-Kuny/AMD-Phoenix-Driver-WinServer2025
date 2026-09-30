@@ -1,3 +1,6 @@
-Drivers/
+# big driver payloads ship via GitHub releases, not the repo
+Drivers/GPU/
+Drivers/Audio/
+Drivers/NPU/
 *.exe
 *.zip
