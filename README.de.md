@@ -49,7 +49,7 @@ Der Installer:
 ### Manuelle Installation
 
 ```powershell
-# Als Administrator ausfuehren
+# Als Administrator ausführen
 powershell -ExecutionPolicy Bypass -File Install.ps1
 ```
 
@@ -93,10 +93,10 @@ AMD-Phoenix-Driver-WinServer2025/
 
 ## Fehlerbehebung
 
-| Symptom | Ursache | Loesung |
+| Symptom | Ursache | Lösung |
 |---|---|---|
 | `0xe0000228` "no compatible drivers" | INF-Dekorationen werden von Build 26100 ignoriert | Installer patcht die INF automatisch (Sektionen `[ATI.Mfg.NTamd64.10.0.3]` + `[ATI.Mfg.NTamd64]`) |
-| Treiber im Store, Geraet bleibt am Basic Display Adapter | Test-signierter Treiber rangiert unterhalb des Inbox-Treibers | Installer faellt auf `devcon update` zurueck (erzwungene Installation) |
+| Treiber im Store, Gerät bleibt am Basic Display Adapter | Test-signierter Treiber rangiert unterhalb des Inbox-Treibers | Installer faellt auf `devcon update` zurueck (erzwungene Installation) |
 | Import-Feher, "file not found" (`acpcfg0001.dat`, `*.xclbin`) | Release-Zips unvollstaendig extrahiert | Die **kompletten** Zips nach `Drivers\Audio` / `Drivers\NPU` extrahieren |
 | `inf2cat`-Fehler | Doppelte INF-Sektionen | Installer dedupliziert automatisch; sonst Release neu laden |
 | Zertifikatsfehler `0x800b0109` bei der Installation | Katalog unsigniert / Zertifikat fehlt | Installer erstellt das Zertifikat und signiert alle Kataloge neu |
@@ -105,7 +105,7 @@ AMD-Phoenix-Driver-WinServer2025/
 
 - **Test Signing** bleibt aktiviert - auf dem Desktop kann ein "Test Mode"-Wasserzeichen erscheinen.
 - Die Pluton-Null-Treiber-INF wird analog zur GPU-INF gepatcht (die HWID-Zeile steckt in einer `...14393`-Dekorierten Sektion, die Build 26100 ignoriert).
-- GPU-Treiber aus der **AMD Software PRO Edition** (Oktober 2024), gepatcht fuer Server ProductType.
+- GPU-Treiber aus der **AMD Software PRO Edition** (Oktober 2024), gepatcht für Server ProductType.
 - Das Zertifikat "AMD Driver Test" muss installiert bleiben, solange der Treiber genutzt wird - Loeschen bricht die Katalog-Validierung.
 
 ## Getestet auf
@@ -116,4 +116,4 @@ AMD-Phoenix-Driver-WinServer2025/
 
 ## Lizenz
 
-Siehe [LICENSE](LICENSE): Die Installer-Skripte und die Dokumentation in diesem Repo stehen unter MIT. **Alle Treiberdateien** (alles unter `Drivers/` und sämtliche Release-Assets) gehören Advanced Micro Devices, Inc. / Microsoft Corporation und unterliegen deren eigenen Lizenzbedingungen - sie sind NICHT MIT und werden unverändert ausschliesslich zu Installationszwecken weiterverbreitet.
+Siehe [LICENSE](LICENSE): Die Installer-Skripte und die Dokumentation in diesem Repo stehen unter MIT. **Alle Treiberdateien** (alles unter `Drivers/` und sämtliche Release-Assets) gehören Advanced Micro Devices, Inc. / Microsoft Corporation und unterliegen deren eigenen Lizenzbedingungen - sie sind NICHT MIT und werden unverändert ausschließlich zu Installationszwecken weiterverbreitet.
